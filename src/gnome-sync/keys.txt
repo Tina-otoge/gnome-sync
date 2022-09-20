@@ -1,0 +1,51 @@
+[org/gnome/desktop/privacy]
+# delete tmp files
+
+[org/gnome/desktop/wm/keybindings]
+# gnome keybindings
+
+[org/gnome/desktop/wm/preferences]
+# buttons layout
+# resize with alt+right click
+
+[org/gnome/mutter]
+# edge tiling
+# workspaces span on every monitors or only on primary
+
+[org/gnome/nautilus/preferences]
+# default view
+# search settings
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings]
+# custom command bindings
+
+[org/gnome/settings-daemon/plugins/power]
+# power button action
+
+[org/gnome/shell]
+app-picker-layout
+; command-history
+disable-extension-version-validation
+disabled-extensions
+enabled-extensions
+favorite-apps
+; welcome-dialog-last-shown-version
+
+[org/gnome/shell/extensions/just-perfection]
+
+[org/gnome/shell/extensions/tiling-assistant]
+
+[org/gnome/shell/overrides]
+# same keys as org/gnome/mutter
+
+[org/gnome/shell/weather]
+
+[org/gnome/shell/window-switcher]
+
+[org/gnome/terminal/legacy/profiles:/]
+
+[org/gtk/gtk4/settings/file-chooser]
+
+[system/locale]
+
+# vim: ft=dosini
