@@ -10,11 +10,19 @@ def filter(d: dict, directories: list[Directory]):
         target = read_path(d, dir.name)
         if target is None:
             continue
-        if not dir.keys:
-            dir.keys = target
-            continue
-        for key in dir.keys:
-            dir.keys[key] = target.get(key)
+        if dir.keys:
+            for key in dir.keys:
+                dir.keys[key] = target.get(key)
+        else:
+            for key, value in target.items():
+                if isinstance(value, dict):
+                    # TODO
+                    """
+                    dirs = Directory.list_from_dict(value, parent=dir.name)
+                    for dir in dirs:
+                        result.append(dir)
+                    """
+                dir.keys[key] = value
         result.append(dir)
     return result
 
