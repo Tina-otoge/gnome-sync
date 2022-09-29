@@ -13,17 +13,11 @@ def filter(d: dict, directories: list[Directory]):
         if dir.keys:
             for key in dir.keys:
                 dir.keys[key] = target.get(key)
+            result.append(dir)
         else:
-            for key, value in target.items():
-                if isinstance(value, dict):
-                    # TODO
-                    """
-                    dirs = Directory.list_from_dict(value, parent=dir.name)
-                    for dir in dirs:
-                        result.append(dir)
-                    """
-                dir.keys[key] = value
-        result.append(dir)
+            # for dir in Directory.list_from_dict(target, dir.name):
+            #     result.append(dir)
+            print('Does not work')
     return result
 
 

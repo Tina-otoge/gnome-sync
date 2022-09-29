@@ -29,6 +29,21 @@ class Directory:
         return s
 
 
+    @classmethod
+    def list_from_dict(cls, d: dict, parent: str):
+        result = []
+        dir = cls(parent)
+        for key, value in d.items():
+            if isinstance(value, dict):
+                dirs = cls.list_from_dict(value, parent=f'{parent}/{key}')
+                for dir in dirs:
+                    result.append(dir)
+                continue
+            dir.keys[key] = value
+            result.append(dir)
+        return result
+
+
 """
 Reads a dconf dump as an iterable of lines and returns it as a list of
 `Directory` objects
