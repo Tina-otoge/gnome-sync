@@ -5,7 +5,8 @@ from .parser import Directory
 
 def filter(directories: list[Directory], filters: list[Directory]):
     """
-    Filter the keys in `d` so only the one that exists in `directories` remain
+    Filter the keys in `directories` so only the one that exists in `filters`
+    remain
     """
     directories_by_name = {d.name: d for d in directories}
     result = []
